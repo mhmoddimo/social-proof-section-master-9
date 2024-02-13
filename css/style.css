@@ -1,0 +1,168 @@
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: left top , right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+main {
+    width: 85%;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+main .content .col-1 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+main .content .col-1 .row-1 {
+    width: 30%;
+}
+main .content .col-1 .row-1 h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 60px;
+    font-weight: 700;
+}
+main .content .col-1 .row-1 p {
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 19px;
+    line-height: 1.4;
+    margin-top: 30px;
+    font-weight: 500;
+}
+main .content .col-1 .row-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: center;
+    width: 40%;
+    gap: 30px;
+}
+main .content .col-1 .row-2 > div {
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 20px 15px;
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    font-size: 20px;
+}
+main .content .col-1 .row-2 .rate-1 {
+    align-self: self-start;
+}
+main .content .col-1 .row-2 .rate-3 {
+    align-self: self-end;
+}
+main .content .col-2 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+main .content .col-2 .card-1 {
+    align-self: self-start;
+}
+main .content .col-2 .card-3 {
+    align-self: self-end;
+}
+main .content .col-2 > div {
+    background-color: var(--Very-Dark-Magenta);
+    padding: 40px;
+    border-radius: 10px;
+}
+main .content .col-2 > div  .info {
+    display: flex;
+    align-items: center;
+}
+main .content .col-2 > div  .info img {
+    border-radius: 50%;
+    width: 40px;
+}
+main .content .col-2 > div  .info .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 15px;
+}
+main .content .col-2 > div  .info .text .name {
+    color: var(--White);
+    font-weight: 400;
+    font-size: 18px;
+}
+main .content .col-2 > div  .info .text .val {
+    color: var(--Soft-Pink);
+    font-weight: 400;
+}
+main .content .col-2 > div p {
+    color: var(--White);
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-mobile-desktop.svg);
+        background-position: left top , right bottom;
+        background-repeat: no-repeat, no-repeat;
+    }
+    main .content .col-1 {
+        flex-direction: column;
+    }
+    main .content .col-1 .row-1 {
+        width: 100%;
+        text-align: center;
+    }
+    main .content .col-1 .row-1  h1{
+        font-size: 30px;
+    }
+    main .content .col-1 .row-2 {
+        width: 100%;
+    }
+    main .content .col-1 .row-2 > div {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    main .content .col-1 .row-2 .rate-1 {
+        align-self: center;
+    }
+    main .content .col-1 .row-2 .rate-3 {
+        align-self: center;
+    }
+    main .content .col-2 {
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+}
